@@ -13,18 +13,18 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        investorId: {
+            type: DataTypes.INTEGER,
+            allowNull:false,
         }
-        // investorId: {
-        //     type: DataTypes.INTEGER,
-        //     allowNull: false
-        // }
     });
-    Portfolio.associate = models => {
-        Portfolio.belongsTo(models.Investor, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    // Portfolio.associate = models => {
+    //     Portfolio.belongsTo(models.Investor, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // };
     return Portfolio
 };

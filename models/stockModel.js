@@ -19,18 +19,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.FLOAT,
             allowNull: false
         },
-        // portfolioId:{
-        //     type:DataTypes.INTEGER,
-        //     allowNull: false
-        // }
+        portfolioId: {
+            type:DataTypes.INTEGER,
+            allowNull: false
+        }
     });
-    Stock.associate = models => {
-        Stock.belongsTo(models.Portfolio, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
+    // Stock.associate = models => {
+    //     Stock.belongsTo(models.Portfolio, {
+    //         foreignKey: {
+    //             allowNull: false
+    //         }
+    //     });
+    // };
 
     return Stock
+
 };

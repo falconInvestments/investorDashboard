@@ -1,9 +1,10 @@
 // require the db created in the index file
+
 const db = require('../models/index')
 
 // get the investors model
 const Investor = db.Investors
-
+const Portfolios = db.Portfolios
 const addInvestor = async (req, res) => {
     let input_data = {
         name: req.body.name,
@@ -19,7 +20,9 @@ const addInvestor = async (req, res) => {
 const getAllInvestors = async (req, res) => {
 
     // using the builtin 'findOne' function on Customer Model
-    let investors = await Investor.findAll({})
+    let investors = await Investor.findAll({
+        include: Portfolios
+    })
     res.status(200).send(investors)
 }      
 
@@ -29,7 +32,7 @@ const getOneInvestor = async (req, res) => {
     let id = req.params.id
     
     // using the builtin 'findOne' function on Customer Model
-    let investors = await Investor.findOne({where: {id: id}})
+    let investors = await Investor.findOne({where: {id: id}, include: Portfolios})
     res.status(200).send(investors)
     }
 

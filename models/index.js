@@ -40,6 +40,11 @@ db.sequelize.sync({ force: true }).then(() => {
   console.log('Error syncing the DB to sequelize' + error)
 })
 
+db.Portfolios.belongsTo(db.Investors);
+db.Investors.hasMany(db.Portfolios)
+
+db.Stocks.belongsTo(db.Portfolios)
+db.Portfolios.hasMany(db.Stocks)
 
 
 module.exports = db;

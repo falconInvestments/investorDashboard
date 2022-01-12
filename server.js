@@ -2,7 +2,6 @@
 //initializing port and express
 const express = require('express')
 const app = express()
-const db = require("./models")
 const port = process.env.PORT || 3000 
 
 //middlewares
@@ -22,12 +21,11 @@ app.use('/api/stocks', routerStocks)
 
 
 
-db.sequelize.sync().then(() => {
-    app.listen(PORT, () => {
-        console.log(`Example app listening at http://localhost:${port}`)
-    })
-})
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
+    })
+    app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
     })

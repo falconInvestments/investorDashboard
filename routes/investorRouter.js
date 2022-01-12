@@ -13,7 +13,7 @@ router.post('/new', investorController.addInvestor)
 router.get('/', investorController.getAllInvestors)
 
 // access one customer by id
-router.get('/get/:id', investorController.getOneInvestor)
+router.get('/:id', investorController.getOneInvestor)
 // modify one customer by id
 router.put('/update/:id', investorController.updateInvestor)
 // delete one customer by id

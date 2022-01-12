@@ -19,7 +19,8 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-    })
+
+    });
     Investor.associate = models => {
         Investor.hasMany(models.Portfolio, {
             onDelete:"cascade"

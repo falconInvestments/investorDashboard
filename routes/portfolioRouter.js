@@ -12,7 +12,7 @@ router.post('/new', portfolioController.addPortfolio)
 router.get('/', portfolioController.getAllPortfolios)
 
 // access one portfolio by id
-router.get('/get/:id', portfolioController.getOnePortfolio)
+router.get('/:id', portfolioController.getOnePortfolio)
 // modify one portfolio by id
 router.put('/update/:id', portfolioController.updatePortfolio)
 // delete one portfolio by id
