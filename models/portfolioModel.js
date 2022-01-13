@@ -19,12 +19,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull:false,
         }
     });
-    // Portfolio.associate = models => {
-    //     Portfolio.belongsTo(models.Investor, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
+
     return Portfolio
 };

@@ -18,14 +18,8 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING,
             allowNull: false
-        },
-
+        }
     });
-    Investor.associate = models => {
-        Investor.hasMany(models.Portfolio, {
-            onDelete:"cascade"
-        });
-    }
-    
+
     return Investor
 }

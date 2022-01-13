@@ -10,7 +10,7 @@ const Stocks = db.Stocks
 const addPortfolio = async (req, res) => {
     let input_data = {
         name: req.body.name,
-        investorId: req.body.investorId
+        investorId: req.body.investorId,
         }
         // using the builtin 'create' function on Customer Model
         const portfolio = await Portfolio.create(input_data)

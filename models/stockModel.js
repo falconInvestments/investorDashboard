@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        symbol: {
+            type: DataTypes.STRING,
+            allowNull:false
+        },
         price: {
             type: DataTypes.FLOAT,
             allowNull: false
@@ -24,14 +28,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         }
     });
-    // Stock.associate = models => {
-    //     Stock.belongsTo(models.Portfolio, {
-    //         foreignKey: {
-    //             allowNull: false
-    //         }
-    //     });
-    // };
-
     return Stock
 
 };

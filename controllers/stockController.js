@@ -13,9 +13,14 @@ const addStock = async (req, res) => {
         }
         // using the builtin 'create' function on Customer Model
         const stock = await Stock.create(input_data)
-        
+        if(stock){
+
+            res.status(200).send(stock)
+        } else {
+            res.status(500).send("server error")
+        }
         // send a 200 response with the created entry
-        res.status(200).send(stock)
+        
 }               
 
 const getAllStocks = async (req, res) => {
