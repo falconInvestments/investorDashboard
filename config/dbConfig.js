@@ -1,7 +1,7 @@
 module.exports = {
-    HOST: 'falconinvestorsdb.cs1ceuw9zz9u.us-east-1.rds.amazonaws.com', // your endpoint
-    USER: 'postgres', // your username
-    PASSWORD: 'password1', // your password
-    DB: 'investorsDB', // your db name
-    dialect: 'postgres',
+    HOST: process.env.Host, // your endpoint
+    USER: process.env.User, // your username
+    PASSWORD: process.env.Password, // your password
+    DB: process.ev.Database, // your db name
+    dialect: postgres,
     }
