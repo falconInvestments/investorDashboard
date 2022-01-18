@@ -1,8 +1,9 @@
 'use strict';
     // require the db configuration from the dbConfig file
 // require the db configuration from the dbConfig file
-const dbConfig = require('../config/dbConfig')
 
+const dbConfig = require('../config/dbConfig')
+const { Sequelize, DataTypes } = require('sequelize')
 // construct the sequelize object using the constructor
 let sequelize = null;
 
@@ -17,7 +18,7 @@ let sequelize = null;
             }
         );
     } else {
-       sequelize = new Sequelize(
+       let sequelize = new Sequelize(
         { // use imported configurations from dbConfig
             database: dbConfig.DB,
             username: dbConfig.USER,
