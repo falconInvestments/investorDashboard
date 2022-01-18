@@ -1,7 +1,7 @@
 module.exports = {
-    HOST: process.env.Host, // your endpoint
-    USER: process.env.User, // your username
-    PASSWORD: process.env.Password, // your password
-    DB: process.ev.Database, // your db name
+    HOST: process.env.HOST, // your endpoint
+    USER: process.env.USER, // your username
+    PASSWORD: process.env.PASSWORD, // your password
+    DB: process.ev.DATABASE, // your db name
     dialect: postgres,
     }
