@@ -8,6 +8,7 @@ const Stock = db.Stocks
 const addStock = async (req, res) => {
     let input_data = {
         name: req.body.name,
+        symbol: req.body.symbol,
         price: req.body.price,
         portfolioId: req.body.portfolioId,
         }
