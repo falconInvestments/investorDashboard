@@ -46,7 +46,7 @@ db.Stocks = require('./stockModel')(sequelize, DataTypes)
 
 // sync the db by running the model
 // "force: false" ensures that the table is not created again every time the program runs
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   console.log('DB synced with sequelize')
 }).catch((error) => {
   console.log('Error syncing the DB to sequelize' + error)
