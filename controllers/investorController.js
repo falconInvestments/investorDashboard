@@ -1,6 +1,5 @@
 // require the db created in the index file
 
-const { Stocks } = require('../models/index')
 const db = require('../models/index')
 
 // get the investors model
