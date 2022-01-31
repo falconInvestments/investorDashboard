@@ -10,7 +10,7 @@ const addStock = async (req, res) => {
         name: req.body.name,
         symbol: req.body.symbol,
         price: req.body.price,
-        investorId: req.body.portfolioId,
+        investorId: req.body.investoroId,
         }
         // using the builtin 'create' function on Customer Model
         const stock = await Stock.create(input_data)
