@@ -25,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         investorId: {
             type:DataTypes.INTEGER,
-            allowNull: true
+            allowNull: false
         }
     });
     return Stock

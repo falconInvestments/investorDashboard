@@ -50,9 +50,8 @@ db.sequelize.sync({ force: false }).then(() => {
 })
 
 
-db.Investors.hasMany(db.Stocks)
-
 db.Stocks.belongsTo(db.Investors)
+db.Investors.hasMany(db.Stocks)
 
 
 module.exports = db;
