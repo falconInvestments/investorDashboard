@@ -17,6 +17,10 @@ module.exports = (sequelize, DataTypes) => {
         investorId: {
             type: DataTypes.INTEGER,
             allowNull:false,
+        },
+        amount: {
+            type: DataTypes.FLOAT,
+            allowNull: true,
         }
     });
 

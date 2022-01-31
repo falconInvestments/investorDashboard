@@ -1,13 +1,14 @@
 
 //initializing port and express
 const express = require('express')
+
 const app = express()
 const port = process.env.PORT || 3000 
 
 //middlewares
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-
+app.use(cors())
 
 //router file
 const routerInvestor = require('./routes/investorRouter.js')
