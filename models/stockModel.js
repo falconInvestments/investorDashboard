@@ -22,11 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         price: {
             type: DataTypes.FLOAT,
             allowNull: false
-        },
-        // portfolioId: {
-        //     type:DataTypes.INTEGER,
-        //     allowNull: false
-        // }
+        }
     });
     return Stock
 
