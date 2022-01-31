@@ -14,8 +14,6 @@ app.use(cors())
 const routerInvestor = require('./routes/investorRouter.js')
 app.use('/api/investors', routerInvestor)
 
-const routerPortfolio = require('./routes/portfolioRouter.js')
-app.use('/api/portfolios', routerPortfolio)
 
 const routerStocks = require('./routes/stockRouter.js')
 app.use('/api/stocks', routerStocks)

@@ -4,6 +4,7 @@
   "description": "aws microservice express routing",
   "main": "server.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "pg": "^8.7.1",
@@ -11,9 +12,7 @@
     "sequelize": "^6.13.0",
     "sequelize-cli": "^6.3.0"
   },
-  "devDependencies": {},
   "scripts": {
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
