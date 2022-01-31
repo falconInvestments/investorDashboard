@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     // modelName is 'investory' (first argument of define() function)
     // When synced, this will create a table name of "modelName" + "s", i.e. "investors"
     const Stock = sequelize.define('stock', {
-        stock_id: { // the id will be our primary key for accessing stock data
+        id: { // the id will be our primary key for accessing stock data
             type: DataTypes.INTEGER,
             autoIncrement: true,
             allowNull: false,
