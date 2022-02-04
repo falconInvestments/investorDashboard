@@ -11,7 +11,7 @@ router.post('/new', userStockController.addUserStock)
 router.get('/', userStockController.getAllUserStocks)
 
 // access one userStock by id
-router.get('/:id', userStockController.getOneUserStock)
+router.get('/:accountId', userStockController.getOneUserStock)
 // modify one userStock by id
 router.put('/update/:id', userStockController.updateUserStock)
 // delete one userStock by id
