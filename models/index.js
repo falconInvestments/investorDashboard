@@ -37,7 +37,7 @@ sequelize.authenticate()
 const db = {}
 db.sequelize = sequelize
 
-db.Investors = require('./investorModel')(sequelize, DataTypes)
+db.UserStocks = require('./userStockModel')(sequelize, DataTypes)
 db.Stocks = require('./stockModel')(sequelize, DataTypes)
 
 
