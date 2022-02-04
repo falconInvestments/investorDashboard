@@ -1,7 +1,7 @@
 // require the db created in the index file
 const db = require('../models/index')
 
-// get the investors model
+
 const Stock = db.Stocks
 
 
@@ -10,8 +10,7 @@ const addStock = async (req, res) => {
     let input_data = {
         name: req.body.name,
         symbol: req.body.symbol,
-        price: req.body.price,
-        investorId : req.body.investoroId,
+        price: req.body.price
         }
         // using the builtin 'create' function on Customer Model
         const stock = await Stock.create(input_data)

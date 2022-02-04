@@ -11,12 +11,14 @@ app.use(express.json());
 app.use(cors())
 
 //router file
-const routerInvestor = require('./routes/investorRouter.js')
-app.use('/api/investors', routerInvestor)
+
 
 
 const routerStocks = require('./routes/stockRouter.js')
 app.use('/api/stocks', routerStocks)
+
+const routerUserStocks = require('./routes/userStockRouter.js')
+app.use('/api/userStocks', routerUserStocks)
 
 
 
