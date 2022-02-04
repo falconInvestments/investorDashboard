@@ -1,4 +1,4 @@
-const userStockController = require('../controllers/UserStockController.js')
+const userStockController = require('../controllers/userStockController.js')
 const router = require('express').Router()
 
 
