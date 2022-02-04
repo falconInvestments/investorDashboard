@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         accountId: {
             type:DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
         }
     });
     return UserStock
