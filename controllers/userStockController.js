@@ -13,7 +13,8 @@ const addUserStock = async (req, res) => {
             symbol: req.body.symbol,
             price: req.body.price,
             accountId : req.body.accountId,
-            sessionId: req.body.sessionId
+            sessionId: req.body.sessionId,
+            quantity: req.body.quantity
             }
             // using the builtin 'create' function on Customer Model
             const userStock = await UserStock.create(input_data)
@@ -55,7 +56,7 @@ const getOneUserStock = async (req, res) => {
 
 const updateUserStock = async (req, res) => {
         let id = req.params.id
-    
+        
         // using the builtin 'update' function on Customer Model
         const userStock = await UserStock.update(req.body, { where: {id: id}})
         res.status(200).send(userStock)
