@@ -23,6 +23,10 @@ module.exports = (sequelize, DataTypes) => {
         accountId: {
             type:DataTypes.INTEGER,
             allowNull: false,
+        },
+         sessionId: {
+            type:DataTypes.INTEGER,
+            allowNull: false,
         }
     });
     return UserStock

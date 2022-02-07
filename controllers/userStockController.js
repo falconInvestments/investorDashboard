@@ -12,6 +12,7 @@ const addUserStock = async (req, res) => {
         symbol: req.body.symbol,
         price: req.body.price,
         accountId : req.body.accountId,
+        sessionId: req.body.sessionId
         }
         // using the builtin 'create' function on Customer Model
         const userStock = await UserStock.create(input_data)
