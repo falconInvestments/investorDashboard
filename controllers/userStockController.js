@@ -29,8 +29,13 @@ const addUserStock = async (req, res) => {
 const getAllUserStocks = async (req, res) => {
 
     // using the builtin 'findOne' function on Customer Model
-    let userStocks = await UserStock.findAll({})
-    res.status(200).send(userStocks)
+    try{
+
+        let userStocks = await UserStock.findAll({})
+        res.status(200).send(userStocks)
+    } catch(error) {
+        console.log(error)
+    }
 }      
 
 const getOneUserStock = async (req, res) => {
