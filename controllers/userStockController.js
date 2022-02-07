@@ -6,23 +6,28 @@ const UserStock = db.UserStocks
 
 
 const addUserStock = async (req, res) => {
+    try{
 
-    let input_data = {
-        name: req.body.name,
-        symbol: req.body.symbol,
-        price: req.body.price,
-        accountId : req.body.accountId,
-        sessionId: req.body.sessionId
-        }
-        // using the builtin 'create' function on Customer Model
-        const userStock = await UserStock.create(input_data)
-        if(userStock){
-
-            res.status(200).send(userStock)
-        } else {
-            res.status(500).send("server error")
-        }
-        // send a 200 response with the created entry
+        let input_data = {
+            name: req.body.name,
+            symbol: req.body.symbol,
+            price: req.body.price,
+            accountId : req.body.accountId,
+            sessionId: req.body.sessionId
+            }
+            // using the builtin 'create' function on Customer Model
+            const userStock = await UserStock.create(input_data)
+            if(userStock){
+    
+                res.status(200).send(userStock)
+            } else {
+                res.status(500).send("server error")
+            }
+            // send a 200 response with the created entry
+      
+    } catch(error) {
+        console.log(error)
+    }
         
 }               
 
